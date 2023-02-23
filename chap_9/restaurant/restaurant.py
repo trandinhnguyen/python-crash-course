@@ -24,15 +24,7 @@ class Restaurant:
             print("Can't roll back")
 
 
-class IceCreamStand(Restaurant):
-    def __init__(self, restaurant_name, cuisine_type):
-        super().__init__(restaurant_name, cuisine_type)
-        self.flavors = ['ngot', 'cay', 'man']
-
-    def get_flavors(self):
-        for flavor in self.flavors:
-            print(flavor.title())
-
-
-my_res = IceCreamStand('nguyen nguyen', 'ice cream stand')
-my_res.get_flavors()
+if __name__ == '__main__':
+    my_res = Restaurant('nguyen', 'hot pot')
+    my_res.increase_number_served(100)
+    print(my_res.number_served)
